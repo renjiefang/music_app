@@ -3,6 +3,9 @@
 > A Vue.js project
 
 ## Build Setup
+1. element-ui组件使用时，覆盖样式不能加scope
+2. 防止切换路由组件从新渲染，加keep-alive
+3. 使用babel-polyfill要放在顶端
 
 ``` bash
 # install dependencies
