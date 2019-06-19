@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const axios = require('axios')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -22,6 +23,26 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+       before(app) {
+         app.get('/api/getSingList', function (req, res) {
+           const url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg'
+           axios.get(url, {
+             headers: {
+               origin: 'https://y.qq.com',
+               referer: 'https://y.qq.com/'
+             },
+             params: req.query
+           }).then((response) => {
+             res.json(response.data) // axios 返回的数据在 response.data，要把数据透传到我们自定义的接口里面 res.json(response.data)
+           }).catch((e) => {
+             console.log(e)
+           })
+         });
+
+
+       },
+
+
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

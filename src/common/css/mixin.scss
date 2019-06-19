@@ -47,3 +47,127 @@
     bottom: -10px;
   }
 }
+@mixin icon($i) {
+   @if  $i == 1 {
+    content: '\e66f';
+     color:#d8505c;
+}
+  @if  $i == 2 {
+    content: '\e66d';
+    color: darkgreen;
+  }
+  @if  $i == 3 {
+    content: '\e66c';
+    color: #b53fc6;
+  }
+  @if  $i == 4 {
+    content: '\e66e';
+    color: plum;
+  }
+  @if  $i == 5 {
+    content: '\e66b';
+    color: #ffcd32;
+  }
+  @if  $i == 6 {
+    content: '\e667';
+    color: coral;
+  }
+  @if  $i == 7 {
+    content: '\e668';
+    color:#d8505c;
+  }
+  @if  $i == 8 {
+    content: '\e669';
+    color: #f33d7e;
+  }
+  @if  $i == 9 {
+    content: '\e66a';
+    color: palegreen;
+  }
+  @if  $i == 10 {
+    content: '\e66f';
+    color:#d8505c;
+  }
+  @if  $i == 11 {
+    content: '\e66f';
+    color:#d8505c;
+  }
+  @if  $i == 12 {
+    content: '\e66d';
+    color: darkgreen;
+  }
+  @if  $i == 13 {
+    content: '\e66c';
+    color: #b53fc6;
+  }
+  @if  $i == 14 {
+    content: '\e66e';
+    color: plum;
+  }
+  @if  $i == 15 {
+    content: '\e66b';
+    color: #ffcd32;
+  }
+  @if  $i == 16 {
+    content: '\e667';
+    color: coral;
+  }
+  @if  $i == 17 {
+    content: '\e668';
+    color:#d8505c;
+  }
+  @if  $i == 18 {
+    content: '\e669';
+    color: #f33d7e;
+  }
+  @if  $i == 19 {
+    content: '\e66a';
+    color: palegreen;
+  }
+
+
+  @if  $i == 20 {
+    content: '\e66a';
+    color: palegreen;
+  }
+  @if  $i == 21 {
+    content: '\e66f';
+    color:#d8505c;
+  }
+  @if  $i == 22 {
+    content: '\e66f';
+    color:#d8505c;
+  }
+  @if  $i == 23 {
+    content: '\e66d';
+    color: darkgreen;
+  }
+  @if  $i == 24 {
+    content: '\e66c';
+    color: #b53fc6;
+  }
+  @if  $i == 25 {
+    content: '\e66e';
+    color: plum;
+  }
+  @if  $i == 26 {
+    content: '\e66b';
+    color: #ffcd32;
+  }
+  @if  $i == 27 {
+    content: '\e667';
+    color: coral;
+  }
+  @if  $i == 28 {
+    content: '\e668';
+    color:#d8505c;
+  }
+  @if  $i == 29 {
+    content: '\e669';
+    color: #f33d7e;
+  }
+  @if  $i == 30 {
+    content: '\e66a';
+    color: palegreen;
+  }
+}

@@ -1,8 +1,8 @@
 <template>
-  <div class="block">
-    <el-carousel trigger="click" height="150px">
+  <div class="block" >
+    <el-carousel trigger="click" style="height:150px!important;" >
       <el-carousel-item v-for="item in recommend" :key="item.id">
-        <img :src="item.picUrl" alt="">
+        <img :src="item.picUrl" alt="" @load="loadImage" class="needsClass" height="150">
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -15,7 +15,12 @@
            recommend: {
              type: Array
            }
-        }
+        },
+      methods: {
+          loadImage() {
+             this.$emit('loadTo')
+          }
+      }
     }
 </script>
 
@@ -27,6 +32,14 @@
     line-height: 150px;
     margin: 0;
   }
+  /*.el-carousel__item {*/
+    /*height:auto!important;*/
+    /*overflow: hidden;*/
+  /*}*/
+  /*.el-carousel__container {*/
+    /*height:auto!important;*/
+    /*overflow: hidden;*/
+  /*}*/
 
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
@@ -39,9 +52,4 @@
     width: 20px;
   }
 
-  img {
-    width: 100%;
-    height: 100%;
-    display:inline-block;
-  }
 </style>
